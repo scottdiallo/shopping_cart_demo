@@ -5,9 +5,12 @@ $(document).ready(function() {
 		var quantity = $('#quantity').val();
 		var description = $('#description').val();
 		var price = '$' + $('#price').val();
-		var item_to_add = '<li class="item"><span>' + quantity + " " + description + " " + price + '</span><input type="checkbox" class="checkbox"/><input type="button" class="delete" value="Delete"/></li>'
+		var item_to_add = '<li class="item"><span class="quantity">' + quantity + ' </span><span class="description">' + description + ' </span><span class="price">' + price + '</span><input type="checkbox" class="checkbox"/><input type="button" class="delete" value="Delete"/></li>'
 		$('.list').append(item_to_add);
 		$('.list').children(':last').fadeIn();
+		$('#quantity').val("");
+		$('#description').val("");
+		$('#price').val("");
 	})
 	$('.list').on('click', 'input[type="button"]', function(event){
 		$(this).parent().remove();	

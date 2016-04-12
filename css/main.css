@@ -1,9 +1,57 @@
-.item {
-	background-color: blue;
-	color: white;
-	display: none;
+.main-container {
+	width: 64%;
+	margin: 0 auto;
+	padding-bottom: 1em;
+	border: 2px solid gray;
+	text-align: center;
+	background-color: #80DEEA;
 }
 
-.checkbox:checked + .delete {
-	background-color: teal;
+.main-container h1 {
+	font-size: 3em;
 }
+
+input[type="text"],
+input[type="number"] {
+	font-size: 1.2em;
+	/* padding: 4em; */
+}
+
+#add_list {
+	font-size: 1.29em;
+	border: 1px solid white;
+	border-radius: 11px;
+	background-color: aquamarine;
+}
+
+.list {
+	padding: 0.5em 0 0 0;
+	list-style: none;
+	width: 100%;
+	text-align: left;
+}
+
+.list > li {
+	padding: .5em;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+}
+
+.list > input[type="checkbox"] + span {
+	text-decoration: line-through; 
+}
+
+.price, .quantity, .description {
+	padding-left: 6em;
+	padding-right: 7em;
+	width: 33.3%;
+}
+
+.delete {
+	float: right;
+}
+
+input[type="checkbox"] {
+	float: left;
+}
+
