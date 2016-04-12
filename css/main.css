@@ -1,5 +1,9 @@
 .item {
 	background-color: blue;
 	color: white;
-	
+	display: none;
+}
+
+.checkbox:checked + .delete {
+	background-color: teal;
 }

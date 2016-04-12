@@ -5,9 +5,28 @@ $(document).ready(function() {
 		var quantity = $('#quantity').val();
 		var description = $('#description').val();
 		var price = '$' + $('#price').val();
-		$('.list').append('<li class="item">' + quantity + " " + description + " " + price + '</li>')
+		var item_to_add = '<li class="item"><span>' + quantity + " " + description + " " + price + '</span><input type="checkbox" class="checkbox"/><input type="button" class="delete" value="Delete"/></li>'
+		$('.list').append(item_to_add);
+		$('.list').children(':last').fadeIn();
+	})
+	$('.list').on('click', 'input[type="button"]', function(event){
+		$(this).parent().remove();	
 	});
+	$('.list').on('change', 'input[type="checkbox"]',function(){
+		// if checked
+		if ($(this).prop('checked')){
+			console.log('checked');
+			$(this).parent().css('background-color', 'red');
+		}	else {
+			$(this).parent().css('background-color', 'maroon');
+		}
 
+	});	  
+		
+	
+	// listen to change event on .list input[type='checkbox']
+	  // if checkbox is selected list item.css('backgraound-color', 'red');
+	  // else 
 })
 
 
